@@ -1,0 +1,311 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 11 19:05:53 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>70 seconds (70371 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.db.testRunner.SmokeRunner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.SmokeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by providing both Role Title and Job ID and verify first preference is given to jobs having jobID", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [28bc0c7f50fadeaa7ac15d64f5527658, findElementFromShadowRoot {shadowId=4B57D0FC9F7C572717FFD1ADB2BADC6D_element_45, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60506}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60506/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28bc0c7f50fadeaa7ac15d64f5527658
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace969502280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace969502280'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [28bc0c7f50fadeaa7ac15d64f5527658, findElementFromShadowRoot {shadowId=4B57D0FC9F7C572717FFD1ADB2BADC6D_element_45, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60506}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60506/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28bc0c7f50fadeaa7ac15d64f5527658
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div></td>
+<td>11</td>
+<td>com.db.testRunner.SmokeRunner@7f3b84b8</td></tr>
+<tr>
+<td title='com.db.testRunner.SmokeRunner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.SmokeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to access Deutsche Bank job search page", "Navigation to Job Search"</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [bc0b4a544647c193b4446f14d07e09d1, findElementFromShadowRoot {shadowId=D1634E6611DA0F21AE5284BC9472BFB1_element_46, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60364}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60364/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc0b4a544647c193b4446f14d07e09d1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearch.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1556730832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1556730832'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [bc0b4a544647c193b4446f14d07e09d1, findElementFromShadowRoot {shadowId=D1634E6611DA0F21AE5284BC9472BFB1_element_46, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60364}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60364/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc0b4a544647c193b4446f14d07e09d1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearch.feature:5)
+</pre></div></td>
+<td>12</td>
+<td>com.db.testRunner.SmokeRunner@7f3b84b8</td></tr>
+<tr>
+<td title='com.db.testRunner.SmokeRunner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.SmokeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by providing both Role Title and Job ID and verify first preference is given to jobs having jobID", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5fc6846fa33e2626ffe60ea5b34464dd, findElementFromShadowRoot {shadowId=6DB9F3C964E1C9A72B7BD6513B0FEE02_element_44, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60585}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60585/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fc6846fa33e2626ffe60ea5b34464dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1332038894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1332038894'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5fc6846fa33e2626ffe60ea5b34464dd, findElementFromShadowRoot {shadowId=6DB9F3C964E1C9A72B7BD6513B0FEE02_element_44, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60585}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60585/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fc6846fa33e2626ffe60ea5b34464dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div></td>
+<td>15</td>
+<td>com.db.testRunner.SmokeRunner@7f3b84b8</td></tr>
+<tr>
+<td title='com.db.testRunner.SmokeRunner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.SmokeRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify job positions when user views all the open positions without applying any filters in Search By section", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6e43a0aea939b44a0270cf63c1d6f7ae, findElementFromShadowRoot {shadowId=3EC5CC3C663A6C3511F406F1C2E19589_element_46, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60438}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60438/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e43a0aea939b44a0270cf63c1d6f7ae
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace533140425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace533140425'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: invalid locator
+  (Session info: MicrosoftEdge=116.0.1938.76)
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6e43a0aea939b44a0270cf63c1d6f7ae, findElementFromShadowRoot {shadowId=3EC5CC3C663A6C3511F406F1C2E19589_element_46, using=xpath, value=//*[@id=&apos;uc-center-container&apos;]/div[2]/div/div/div/button[3]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.76, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60438}, msedge: {msedgedriverVersion: 116.0.1938.76 (3ea752a1990a..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60438/devtoo..., se:cdpVersion: 116.0.1938.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e43a0aea939b44a0270cf63c1d6f7ae
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.ShadowRoot.findElement(ShadowRoot.java:55)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_is_on_deutsche_bank_career_page(DBCareerDefinitions.java:60)
+	at ✽.User is on Deutsche Bank career page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:5)
+</pre></div></td>
+<td>20</td>
+<td>com.db.testRunner.SmokeRunner@7f3b84b8</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<html>
+<head>
+<title>TestNG:  DBJobSearchTest2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>DBJobSearchTest2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Sep 03 09:36:00 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>321 seconds (321927 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that all the links on Careers page are working", "Navigation to Job Search"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[0]&gt; but was:&lt;[1]&gt;
+	at com.db.stepdefinitions.DBCareerDefinitions.there_should_be_no_broken_links_on_the_page(DBCareerDefinitions.java:208)
+	at ✽.There should be no broken links on the page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearch.feature:32)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1344345219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1344345219'><pre>org.junit.ComparisonFailure: expected:&lt;[0]&gt; but was:&lt;[1]&gt;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.db.stepdefinitions.DBCareerDefinitions.there_should_be_no_broken_links_on_the_page(DBCareerDefinitions.java:208)
+	at ✽.There should be no broken links on the page(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearch.feature:32)
+</pre></div></td>
+<td>67</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by Profession and is able to see relevant results after applying necessary filters in Search By section", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [80760bfdf30a72fd0d421666161d29d2, actions {actions=[org.openqa.selenium.interactions.Sequence@586843bc]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50778}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50778/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80760bfdf30a72fd0d421666161d29d2
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:40)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2106287833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2106287833'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [80760bfdf30a72fd0d421666161d29d2, actions {actions=[org.openqa.selenium.interactions.Sequence@586843bc]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50778}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50778/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80760bfdf30a72fd0d421666161d29d2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:40)
+</pre></div></td>
+<td>29</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by Profession and is able to see relevant results after applying necessary filters in Search By section", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [189227486e846452358b0e918eed2ba1, actions {actions=[org.openqa.selenium.interactions.Sequence@794c5f5e]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50874}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50874/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 189227486e846452358b0e918eed2ba1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:40)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace594043354", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace594043354'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [189227486e846452358b0e918eed2ba1, actions {actions=[org.openqa.selenium.interactions.Sequence@794c5f5e]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50874}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50874/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 189227486e846452358b0e918eed2ba1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:40)
+</pre></div></td>
+<td>34</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by Division and is able to see relevant results after applying necessary filters in Search By section", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [390abcdabf1c8f7e523a0a546509aacb, actions {actions=[org.openqa.selenium.interactions.Sequence@56a05324]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50565}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50565/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 390abcdabf1c8f7e523a0a546509aacb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:20)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1700794291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1700794291'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [390abcdabf1c8f7e523a0a546509aacb, actions {actions=[org.openqa.selenium.interactions.Sequence@56a05324]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50565}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50565/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 390abcdabf1c8f7e523a0a546509aacb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:20)
+</pre></div></td>
+<td>28</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to search jobs by Division and is able to see relevant results after applying necessary filters in Search By section", "Search and Validate Job Openings"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a5274dc2df28983decc1396e938b222, actions {actions=[org.openqa.selenium.interactions.Sequence@1ab53860]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50677}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50677/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a5274dc2df28983decc1396e938b222
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:20)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1471756447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1471756447'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=116.0.1938.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9a5274dc2df28983decc1396e938b222, actions {actions=[org.openqa.selenium.interactions.Sequence@1ab53860]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 116.0.1938.69, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50677}, msedge: {msedgedriverVersion: 116.0.1938.69 (62ef76ea75c4..., userDataDir: C:\Users\HP\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50677/devtoo..., se:cdpVersion: 116.0.1938.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a5274dc2df28983decc1396e938b222
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
+	at com.db.utils.DBHelperMethods.selectValueFromDropdown(DBHelperMethods.java:33)
+	at com.db.stepdefinitions.DBCareerDefinitions.lambda$0(DBCareerDefinitions.java:266)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1553)
+	at com.db.stepdefinitions.DBCareerDefinitions.user_selects_division_category_and_other_filters(DBCareerDefinitions.java:261)
+	at ✽.User selects division category and other filters(file:///C:/Users/HP/eclipse-workspace/DBCareers_Project/src/test/resources/features/JobSearchFilters.feature:20)
+</pre></div></td>
+<td>27</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to access Deutsche Bank job search page", "Navigation to Job Search"</td>
+<td></td>
+<td>30</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user is able to navigate to Job search results page by different routes", "Navigation to Job Search"</td>
+<td></td>
+<td>53</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to access all the links present under Professionals section", "Navigation to Job Search"</td>
+<td></td>
+<td>13</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+<tr>
+<td title='com.db.testRunner.Runner.runScenario()'><b>runScenario</b><br>Test class: com.db.testRunner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify job positions when user views all the open positions without applying any filters in Search By section", "Search and Validate Job Openings"</td>
+<td></td>
+<td>33</td>
+<td>com.db.testRunner.Runner@59662a0b</td></tr>
+</table><p>
+</body>
+</html>
